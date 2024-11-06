@@ -18,6 +18,7 @@ class Project extends Model
         "creation_date"
     ];
 
+     //! Relaçao "one to Many" com Project
     public function types()
     {
         return $this->hasMany(Type::class);
