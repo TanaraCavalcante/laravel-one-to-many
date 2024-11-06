@@ -13,7 +13,10 @@ class DatabaseSeeder extends Seeder
     public function run(): void
     {
         //chamo meu ProjectSeeder diretamente do db com: php artisan db:seed
-        $this -> call(ProjectSeeder::class);
+        $this->call([
+            ProjectSeeder::class,
+            TypeSeeder::class,
+        ]);
 
     }
 }
