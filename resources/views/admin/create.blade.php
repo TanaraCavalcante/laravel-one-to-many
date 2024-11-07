@@ -45,7 +45,7 @@
                     <div class="mb-3 row">
                         <label for="project-types" class="col-sm-3 col-form-label">Project Type</label>
                         <div class="col-sm-8">
-                        <select name="types" id="project-types">
+                        <select name="types" id="project-types" class="form-select">
                             @foreach ($types as $type)
                                 <option value="{{$type->id}}">
                                     {{$type->name}}
@@ -54,6 +54,7 @@
                         </select>
                         </div>
                     </div>
+                    {{--TODO fim da tabela secundaria --}}
                     <div class="mb-3 row">
                         <label for="project-github_link" class="col-sm-3 col-form-label">GitHub Link</label>
                         <div class="col-sm-8">

@@ -43,12 +43,22 @@
                         <input type="text" class="form-control" id="project-category" name="category" value="{{ old('category', $project->category)}}">
                         </div>
                     </div>
+
+                    {{--TODO dados da segunda tabela: Types --}}
                     <div class="mb-3 row">
-                        <label for="project-types" class="col-sm-3 col-form-label">Type Project</label>
+                        <label for="project-types" class="col-sm-3 col-form-label">Project Type</label>
                         <div class="col-sm-8">
-                        <input type="text" class="form-control" id="project-types" name="types" value="{{ old('types', $project->type->name)}}">
+                        <select name="types" id="project-types" class="form-select">
+                            @foreach ($types as $type)
+                                <option value=" {{old('types',$type->id)}}">
+                                    {{$type->name}}
+                                </option>
+                            @endforeach
+                        </select>
                         </div>
                     </div>
+                    {{--TODO fim da tabela secundaria --}}
+
                     <div class="mb-3 row">
                         <label for="project-github_link" class="col-sm-3 col-form-label">GitHub Link</label>
                         <div class="col-sm-8">
