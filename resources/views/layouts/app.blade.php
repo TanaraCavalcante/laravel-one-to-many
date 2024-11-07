@@ -32,7 +32,7 @@
                     <ul class="navbar-nav me-auto">
                         <li class="nav-item">
                             <a class="nav-link @if (Route::is('admin.index')) active @endif" aria-current="page" href="{{ route("admin.index") }}">
-                                Home
+                                Projects-list
                             </a>
                         </li>
                         <li class="nav-item">
