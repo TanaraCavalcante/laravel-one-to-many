@@ -19,8 +19,8 @@ class Project extends Model
     ];
 
      //! Relaçao "one to Many" com Project
-    public function types()
+    public function type()
     {
-        return $this->hasMany(Type::class);
+        return $this->belongsTo(Type::class);
     }
 }

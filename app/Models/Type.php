@@ -10,8 +10,8 @@ class Type extends Model
     use HasFactory;
 
     //! Relaçao "many to one" com Project
-    public function project()
+    public function projects()
     {
-        return $this->belongsTo(Project::class);
+        return $this->hasMany(Project::class);
     }
 }

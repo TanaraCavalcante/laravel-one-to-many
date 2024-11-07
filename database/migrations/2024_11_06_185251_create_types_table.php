@@ -13,7 +13,6 @@ return new class extends Migration
     {
         Schema::create('types', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('project_id')->constrained()->after("id"); //campo que serà chave de colegamento com Projects
             $table->string("name");
             $table->timestamps();
         });

@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('projects', function (Blueprint $table) {
             $table->id();
+            $table->foreignId('type_id')->constrained()->after("id"); //campo que serà chave de colegamento com Types
             $table->string('title'); // Título do projeto
             $table->text('description')->nullable(); // Descrição do projeto
             $table->string('category')->nullable(); // Tipo de tecnologia
