@@ -14,7 +14,7 @@ class Project extends Model
         "description",
         "category",
         "tech_stack",
-        "type_id",
+        "type_id", //!Dados da tabela secundaria
         "github_link",
         "creation_date"
     ];
