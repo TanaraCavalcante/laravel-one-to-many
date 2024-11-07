@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Admin;
 
+use App\Models\Type;
 use App\Models\Project;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -22,7 +23,9 @@ class ProjectController extends Controller
      */
     public function create()
     {
-        return view("admin.create");
+        $project = new Project();
+        $types = Type::all();
+        return view("admin.create", compact("project","types"));
     }
 
     /**
@@ -35,6 +38,7 @@ class ProjectController extends Controller
             "title" => "required|string|min:2|max:255", //uma stringa con min 4 caracter max 255, pois no db è un VARCHAR(255)
             "description" => "required|string|min:6|max:255",
             "category" => "required|string|min:2|max:255",
+            "type->name"=>"required|string|min:2|max:255",
             "tech_stack" => "required|string|min:2|max:255",
             "github_link" => "required|url",
             "creation_date" => "required|date",
@@ -60,7 +64,8 @@ class ProjectController extends Controller
     public function edit(string $id)
     {
         $project = Project::findOrFail($id);
-         return view("admin.edit", compact("project"));
+        $types = Type::all();
+        return view("admin.edit", compact("project","types"));
     }
 
     /**
@@ -73,6 +78,7 @@ class ProjectController extends Controller
             "title" => "required|string|min:2|max:255", //uma stringa con min 4 caracter max 255, pois no db è un VARCHAR(255)
             "description" => "required|string|min:6|max:255",
             "category" => "required|string|min:2|max:255",
+            "type->name"=>"required|string|min:2|max:255",
             "tech_stack" => "required|string|min:2|max:255",
             "github_link" => "required|url",
             "creation_date" => "required|date",

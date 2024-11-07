@@ -43,7 +43,12 @@
                         <input type="text" class="form-control" id="project-category" name="category" value="{{ old('category', $project->category)}}">
                         </div>
                     </div>
-                   
+                    <div class="mb-3 row">
+                        <label for="project-types" class="col-sm-3 col-form-label">Type Project</label>
+                        <div class="col-sm-8">
+                        <input type="text" class="form-control" id="project-types" name="types" value="{{ old('types', $project->type->name)}}">
+                        </div>
+                    </div>
                     <div class="mb-3 row">
                         <label for="project-github_link" class="col-sm-3 col-form-label">GitHub Link</label>
                         <div class="col-sm-8">
