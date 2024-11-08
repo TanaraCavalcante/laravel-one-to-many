@@ -81,7 +81,6 @@ class ProjectController extends Controller
             "description" => "required|string|min:6|max:255",
             "category" => "required|string|min:2|max:255",
             "type_id"=>"required|numeric|integer|exists:types,id", //!Tabela secundaria
-            "type->name"=>"required|string|min:2|max:255",
             "tech_stack" => "required|string|min:2|max:255",
             "github_link" => "required|url",
             "creation_date" => "required|date",

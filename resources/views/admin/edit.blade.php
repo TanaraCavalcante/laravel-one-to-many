@@ -48,7 +48,7 @@
                     <div class="mb-3 row">
                         <label for="project-types" class="col-sm-3 col-form-label">Project Type</label>
                         <div class="col-sm-8">
-                        <select name="types" id="project-types" class="form-select">
+                        <select name="type_id" id="project-types" class="form-select">
                             @foreach ($types as $type)
                                 <option value=" {{old('types',$type->id)}}">
                                     {{$type->name}}
