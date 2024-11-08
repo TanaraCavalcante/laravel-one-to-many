@@ -47,7 +47,7 @@
                         <div class="col-sm-8">
                         <select name="types" id="project-types" class="form-select">
                             @foreach ($types as $type)
-                                <option value="{{$type->id}}">
+                                <option value="{{old('types',$type->id)}}">
                                     {{$type->name}}
                                 </option>
                             @endforeach
